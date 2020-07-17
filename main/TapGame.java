@@ -31,7 +31,7 @@ public class TapGame {
     DropTimer dropTimer;
     //static GameMainGui gameMainGui = gameMainGui.getJPMain();
     static GameMainGui gameMainGui;
-    static TransApi api = new TransApi("20190624000310067", "dY9hZt6C43mZ5wNBzdRu");
+    static TransApi api = new TransApi("", "");//you app id and key
     private static int score = 0;
     private static  int life = 3;
     private static int finshCount = 0;
@@ -45,74 +45,9 @@ public class TapGame {
     private static String CurrentWordChinese = "...";
     private static SQLiteJDBCUtils.PlayerData playerData;
     public static void main(String[] args) {
-        /*try {
-            decrypt.main();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }*/
         NewGameGui.main(args);
-
-
-    }
-    public static String ALLATORIxDEMO(String a) {
-        final int n = 1 << 3 ^ 0x2;
-        final int n2 = 5 << 3 ^ 0x2;
-        final int length = (a = a).length();
-        final char[] array = new char[length];
-        int n3;
-        int i = n3 = length - 1;
-        final char[] value = array;
-        final char c = (char)n2;
-        final int n4 = n;
-        while (i >= 0) {
-            final char[] array2 = value;
-            final String s = a;
-            final int index = n3;
-            final char char1 = s.charAt(index);
-            --n3;
-            array2[index] = (char)(char1 ^ n4);
-            if (n3 < 0) {
-                break;
-            }
-            final char[] array3 = value;
-            final String s2 = a;
-            final int index2 = n3--;
-            array3[index2] = (char)(s2.charAt(index2) ^ c);
-            i = n3;
-        }
-        System.out.println(value);
-        return new String(value);
     }
 
-    public static String ALLATORIxDEMOB(String a) {
-        final int n = (0x3 ^ 0x5) << 4 ^ (0x2 ^ 0x5) << 1;
-        final int n2 = (0x2 ^ 0x5) << 3 ^ (0x3 ^ 0x5);
-        final int length = (a = a).length();
-        final char[] array = new char[length];
-        int n3;
-        int i = n3 = length - 1;
-        final char[] value = array;
-        final char c = (char)n2;
-        final int n4 = n;
-        while (i >= 0) {
-            final char[] array2 = value;
-            final String s = a;
-            final int index = n3;
-            final char char1 = s.charAt(index);
-            --n3;
-            array2[index] = (char)(char1 ^ n4);
-            if (n3 < 0) {
-                break;
-            }
-            final char[] array3 = value;
-            final String s2 = a;
-            final int index2 = n3--;
-            array3[index2] = (char)(s2.charAt(index2) ^ c);
-            i = n3;
-        }
-        System.out.println(value);
-        return new String(value);
-    }
     public static String getCurrentWordChinese() {
         return CurrentWordChinese;
     }
